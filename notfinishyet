@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main(int argc, char *argv[]) {
+    //int size = 10;
+    //int score[size] = {0,11,22,33,55,66,77,99,88,44};
+    //int score[size];
+    //score = {0,11,22,33,55,66,77,99,88,44};
+    //int score[8] = {1,13};
+    
+    //int score[10] = {0,11,22,33,55,66,77,99,88,44};
+    //int score[1] = {13};
+    //int score[2] = {73,65};
+    
+    int size = sizeof(score) / sizeof(score[0]);
+    
+    int max=-1;
+    int min=101;
+    for (int i=0; i< size ; i=i+1) {
+        //printf("score[i] %d\n", score[i]);
+        printf("%d ", score[i]);
+        if(max < score[i] && score[i] < 60) max = score[i];
+        if(min > score[i] && score[i] > 60) min = score[i];
+    }
+    printf("\n");
+    
+    if(max == -1){
+        printf("best case");
+    }else{
+        printf("%d",max);
+    }
+    printf("\n");
+    if(min == 101){
+        printf("worst case");
+    }else{
+        printf("%d",min);
+    }
+}
