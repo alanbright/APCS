@@ -1,0 +1,16 @@
+int f (int a[], int n) {
+ int index = 0;
+ for (int i=1; i<=n-1; i=i+1) {
+ if (a[i] >= a[index]) {
+ index = i;
+ }
+ }
+ return index;
+}
+
+/*
+看懂他其實就是找最後一個最大值的index，自然就會根據題目給出的值
+a[10]={ 1, 3, 9, 2, 5,8, 4, 9, 6, 7 }
+答案為7
+本題的變化型則要小心啟動和結束範圍
+*/
